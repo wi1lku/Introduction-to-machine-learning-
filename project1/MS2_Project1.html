@@ -14688,7 +14688,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Użyjemy modelu opartego o las losowy, aby stwierdzić, czy któraś z naszych zmiennych nie pogarsza predykcyjności. Problemem będzie to, że nie wiadomo jak liczyć jak dobre są predykcje. Wiemy przecież, że jeśli wynikiem powinien być mat w 14 ruchach, to lepiej będzie, żeby model przewidział odpowiedź 13 niż 2. Zatem nie możemy używać takiej miary jak 'accuracy' albo 'recall'. Kusi, żeby w takim przypadku użyć RMSE, żeby wiedzieć jak daleko jesteśmy od poprawnych wyników. Tu jednak natrafiamy na problem z remisami. Jeśli nasz model przewidzi mat w 3 ruchach kiedy powinien być remis, to nie będzie to lepszy wynik niż jeśli model przewidzi mat w 15 ruchach. Napiszemy zatem 2 funkcje oceniające, czy predykcje są dobre.</p>
+<p>Użyjemy modelu opartego o las losowy, aby stwierdzić, czy któraś z naszych zmiennych nie pogarsza predykcyjności. Problemem będzie to, że nie jest oczywiste, w jaki sposób oceniać jak dobre są predykcje. Wiemy przecież, że jeśli wynikiem powinien być mat w 14 ruchach, to lepiej będzie, żeby model przewidział odpowiedź 13 niż 2. Zatem nie możemy używać takiej miary jak 'accuracy' albo 'recall'. Kusi, żeby w takim przypadku użyć RMSE, żeby wiedzieć jak daleko jesteśmy od poprawnych wyników. Tu jednak natrafiamy na problem z remisami. Jeśli nasz model przewidzi mat w 3 ruchach, gdy powinien być remis, to nie będzie to lepszy wynik niż jeśli model przewidzi mat w 15 ruchach. Napiszemy zatem 2 funkcje oceniające czy predykcje są dobre.</p>
 
 </div>
 </div>
@@ -14711,7 +14711,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Funkcja będzie liczyć F1-score dla rekordów, w których pojawiają się remisy</p>
+<p>Funkcja będzie liczyć F1-score dla rekordów, w których pojawiają się remisy.</p>
 
 </div>
 </div>
@@ -14765,7 +14765,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Funkcja będzie liczyć rmse dla rekordów w których biały wygrywa</p>
+<p>Funkcja będzie liczyć rmse dla rekordów w których biały wygrywa.</p>
 
 </div>
 </div>
@@ -14929,7 +14929,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Jak widać najmniejszy wpływ na predykcyjność mają kolumny mówiące o tym, czy dana figura jest w rogu. Największy ma odległość wieży od czarnego króla</p>
+<p>Jak widać najmniejszy wpływ na predykcyjność mają kolumny mówiące o tym, czy dana figura jest w rogu. Największy ma odległość wieży od czarnego króla.</p>
 
 </div>
 </div>
@@ -14941,7 +14941,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Napiszemy niestandardowy transformator, którego użyjemy, aby sprawdzić, czy modele uczone na danych bez najmniej istotnych kolumn, będą osiągały lepsze wyniki.</p>
+<p>Napiszemy niestandardowy transformator, którego użyjemy, aby sprawdzić, czy modele uczone na danych bez najmniej istotnych kolumn będą osiągały lepsze wyniki.</p>
 
 </div>
 </div>
@@ -14999,7 +14999,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Sprawdźmy, czy pozbywając się najmniej istotnych kolumn poprawimy predykcyjność.</p>
+<p>Sprawdźmy czy pozbywając się najmniej istotnych kolumn poprawimy predykcyjność.</p>
 
 </div>
 </div>
@@ -15177,7 +15177,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Najwyższą predykcyjność dostaliśmy używając tylko 6 najważniejszych kolumn, a więc tych informujących o odległości figur między sobą. Jest to zgodne z intuicją, ponieważ jedynie kiedy w najbliższym ruchu czarny król może zbić wieże (a więc jest obok niej), może być remis. Reszta kolumn jest w tym przypadku szumem.</p>
+<p>Najwyższą predykcyjność dostaliśmy używając tylko 6 najważniejszych kolumn, a więc tych informujących o odległości figur między sobą. Jest to zgodne z intuicją, ponieważ aby był remis czarny król musi zbić wieżę w najbliższym ruchu (a więc stać obok niej). Reszta kolumn jest w tym przypadku szumem.</p>
 
 </div>
 </div>
@@ -15339,7 +15339,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nasz model najlepiej przybliża liczbę ruchów do mata, używając 10 najważniejszych kolumn. Okazuje się, że informacja o tym, czy wieża i biały król są w rogach szachownicy jest dla nas nieistotna.</p>
+<p>Nasz model najlepiej przybliża liczbę ruchów do mata używając 10 najważniejszych kolumn. Okazuje się, że informacja o tym czy wieża i biały król są w rogach szachownicy jest dla nas nieistotna.</p>
 
 </div>
 </div>
@@ -15392,7 +15392,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Mniej niż 10% rekordów w naszym zbiorze opisuje remisy. Zatem ważniejsze wydaje się być dobre przybliżenie liczby ruchów do mata. Zostawimy zatem 10 najważniejszych kolumn.</p>
+<p>Mniej niż 10% rekordów w naszym zbiorze opisuje remisy. Z tego powodu ważniejsze wydaje się być dobre przybliżenie liczby ruchów do mata. Zostawimy zatem 10 najważniejszych kolumn.</p>
 
 </div>
 </div>
@@ -15432,7 +15432,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wybierzmy 3 najbardziej obiecujące modele na domyślnych parametrach. Do standardowych modeli dodamy StackingClassifier, który będzie wykorzystywał jako modele bazowe, wszystkie pozostałe. Jako meta model, będzie wykorzystywał regresję logistyczną.</p>
+<p>Wybierzmy 3 najbardziej obiecujące modele na domyślnych parametrach. Do standardowych modeli dodamy StackingClassifier, który będzie wykorzystywał wszystkie pozostałe jako modele bazowe. Jako meta-model, będzie wykorzystywał regresję logistyczną.</p>
 
 </div>
 </div>
@@ -15445,8 +15445,7 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import modeli</span>
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">StackingClassifier</span>
@@ -15473,15 +15472,14 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># modele bazowe do stackingu</span>
-<span class="n">base_models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">base_models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;lr&#39;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">()),</span>
-    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
     <span class="p">(</span><span class="s1">&#39;knn&#39;</span><span class="p">,</span> <span class="n">KNeighborsClassifier</span><span class="p">()),</span>
-    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;gb&#39;</span><span class="p">,</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;gb&#39;</span><span class="p">,</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span> <span class="o">=</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)),</span>
     <span class="p">(</span><span class="s1">&#39;svm&#39;</span><span class="p">,</span> <span class="n">SVC</span><span class="p">()),</span>
     <span class="p">(</span><span class="s1">&#39;bayes&#39;</span><span class="p">,</span> <span class="n">GaussianNB</span><span class="p">())</span>
 <span class="p">])</span>
@@ -15500,18 +15498,17 @@ Politechnika Warszawska, Wydział Matematyki i Nauk Informacyjnych, Wstęp do uc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lista modeli</span>
-<span class="n">models</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="n">models</span><span class="p">[</span><span class="s1">&#39;lr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;dtc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;dtc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">models</span><span class="p">[</span><span class="s1">&#39;knn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;rfc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;ab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;gb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;xgb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;rfc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;ab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;gb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;xgb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span> <span class="o">=</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">models</span><span class="p">[</span><span class="s1">&#39;svm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
 <span class="n">models</span><span class="p">[</span><span class="s1">&#39;bayes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;stacking&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">base_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;stacking&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span> <span class="o">=</span> <span class="n">base_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15728,7 +15725,7 @@ stacking: mean = -1.4881, std = 0.0775
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Modele dające najlepsze wyniki: DecisionTreeClassifier, RandomForestClassifier, GradientBoostingClassifier, XGBClassifier, StackingClassifier. A więc te same, które dawały dabre wyniki przy klasyfikacji remisów.</p>
+<p>Modele dające najlepsze wyniki: DecisionTreeClassifier, RandomForestClassifier, XGBClassifier, StackingClassifier. A więc te same, które dawały dobre wyniki przy klasyfikacji remisów.</p>
 
 </div>
 </div>
@@ -15741,10 +15738,10 @@ stacking: mean = -1.4881, std = 0.0775
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">draw_results</span><span class="p">,</span> <span class="n">showmeans</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">draw_results</span><span class="p">,</span> <span class="n">showmeans</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">model_names</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">win_results</span><span class="p">,</span> <span class="n">showmeans</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">win_results</span><span class="p">,</span> <span class="n">showmeans</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">model_names</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15791,7 +15788,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Sprawdźmy jeszcze, czy lepiej nie poradzi sobie Stacking Classifier, który będzie używał tylko najlepszych modeli, jako modeli bazowych.</p>
+<p>Sprawdźmy jeszcze, czy lepiej nie poradzi sobie Stacking Classifier, który będzie używał tylko najlepszych modeli jako modeli bazowych.</p>
 
 </div>
 </div>
@@ -15801,16 +15798,18 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selected_base_models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span>
-    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;gb&#39;</span><span class="p">,</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;gb&#39;</span><span class="p">,</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span> <span class="o">=</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)),</span>
 <span class="p">])</span>
-<span class="n">selected_stacking</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">selected_base_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">selected_stacking</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span> <span class="o">=</span> <span class="n">selected_base_models</span><span class="p">,</span>
+                                       <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span>
+                                       <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15823,7 +15822,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">selected_stacking</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -15863,7 +15862,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">selected_stacking</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -15905,7 +15904,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wyliczanie modelu opartego o 'stacking' zajmuje dużo czasu. W ten sposób jednak udało nam się w najlepszy sposób estymować liczbę optymalnych ruchów potrzebnych do szacha. W następnym kroku spróbujemy dobrać optymalne parametry do 3 najlepszych modeli podstawowych (bez 'stacking') i sprawdzić, który z nich jest najlepszy. Następnie zbudujemy na nich model 'StackingClassifier'. Ostatecznie wybierzemy najlepiej radzący sobie model.</p>
+<p>Wyliczanie modelu opartego o 'stacking' zajmuje dużo czasu. W ten sposób jednak udało nam się w najlepszy sposób estymować liczbę optymalnych ruchów potrzebnych do mata. W następnym kroku spróbujemy dobrać optymalne parametry do 3 najlepszych modeli podstawowych (bez 'stacking') i sprawdzić, który z nich jest najlepszy. Następnie zbudujemy na nich model 'StackingClassifier'. Ostatecznie wybierzemy najlepiej radzący sobie model.</p>
 
 </div>
 </div>
@@ -15949,7 +15948,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
@@ -15960,8 +15959,9 @@ jp-needs-light-background
  <span class="s2">&quot;gamma&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
  <span class="s2">&quot;colsample_bytree&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span> <span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)</span>
-<span class="n">xgb_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">xgb</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">)</span>
+<span class="n">xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">xgb_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">xgb</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">xgb_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -15980,19 +15980,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[00:34:59] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.1/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective &#39;multi:softprob&#39; was changed from &#39;merror&#39; to &#39;mlogloss&#39;. Explicitly set eval_metric if you&#39;d like to restore the old behavior.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
 
 
 
@@ -16010,11 +15998,10 @@ jp-needs-light-background
                                            max_delta_step=None, max_depth=None,
                                            min_child_weight=None, missing=nan,
                                            monotone_constra...
-                                           reg_alpha=None, reg_lambda=None,
                                            scale_pos_weight=None,
                                            subsample=None, tree_method=None,
                                            validate_parameters=None,
-                                           verbosity=None),
+                                           verbosity=0),
                    n_iter=50, n_jobs=-1,
                    param_distributions={&#39;colsample_bytree&#39;: [0.2, 0.4, 0.6,
                                                              0.8],
@@ -16023,7 +16010,7 @@ jp-needs-light-background
                                                           0.25, 0.3],
                                         &#39;max_depth&#39;: [2, 4, 6, 8, 10, 12],
                                         &#39;min_child_weight&#39;: [1, 3, 5, 7]},
-                   scoring=make_scorer(draw_f1_fun))</pre>
+                   random_state=1, scoring=make_scorer(draw_f1_fun))</pre>
 </div>
 
 </div>
@@ -16037,7 +16024,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -16058,16 +16045,16 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>{&#39;min_child_weight&#39;: 3,
- &#39;max_depth&#39;: 4,
+ &#39;max_depth&#39;: 12,
  &#39;learning_rate&#39;: 0.25,
- &#39;gamma&#39;: 0.1,
+ &#39;gamma&#39;: 0.2,
  &#39;colsample_bytree&#39;: 0.8}</pre>
 </div>
 
@@ -16082,7 +16069,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16122,7 +16109,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16148,7 +16135,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>xgb: mean = -1.4227, std = 0.0711
+<pre>xgb: mean = -1.3287, std = 0.062
 </pre>
 </div>
 </div>
@@ -16173,7 +16160,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -16183,8 +16170,9 @@ jp-needs-light-background
  <span class="s2">&quot;gamma&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
  <span class="s2">&quot;colsample_bytree&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span> <span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)</span>
-<span class="n">xgb_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">xgb</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">)</span>
+<span class="n">xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span> <span class="o">=</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">xgb_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">xgb</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">xgb_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -16203,19 +16191,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[00:44:59] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.1/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective &#39;multi:softprob&#39; was changed from &#39;merror&#39; to &#39;mlogloss&#39;. Explicitly set eval_metric if you&#39;d like to restore the old behavior.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
 
 
 
@@ -16233,11 +16209,10 @@ jp-needs-light-background
                                            max_delta_step=None, max_depth=None,
                                            min_child_weight=None, missing=nan,
                                            monotone_constra...
-                                           reg_alpha=None, reg_lambda=None,
                                            scale_pos_weight=None,
                                            subsample=None, tree_method=None,
                                            validate_parameters=None,
-                                           verbosity=None),
+                                           verbosity=0),
                    n_iter=50, n_jobs=-1,
                    param_distributions={&#39;colsample_bytree&#39;: [0.2, 0.4, 0.6,
                                                              0.8],
@@ -16246,7 +16221,7 @@ jp-needs-light-background
                                                           0.25, 0.3],
                                         &#39;max_depth&#39;: [2, 4, 6, 8, 10, 12],
                                         &#39;min_child_weight&#39;: [1, 3, 5, 7]},
-                   scoring=make_scorer(win_neg_rmse_fun))</pre>
+                   random_state=1, scoring=make_scorer(win_neg_rmse_fun))</pre>
 </div>
 
 </div>
@@ -16260,7 +16235,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -16281,15 +16256,15 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;min_child_weight&#39;: 1,
- &#39;max_depth&#39;: 10,
- &#39;learning_rate&#39;: 0.3,
+<pre>{&#39;min_child_weight&#39;: 3,
+ &#39;max_depth&#39;: 12,
+ &#39;learning_rate&#39;: 0.2,
  &#39;gamma&#39;: 0.3,
  &#39;colsample_bytree&#39;: 0.8}</pre>
 </div>
@@ -16305,7 +16280,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16331,7 +16306,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>xgb: mean = -1.327, std = 0.0569
+<pre>xgb: mean = -1.3371, std = 0.056
 </pre>
 </div>
 </div>
@@ -16345,7 +16320,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">xgb_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16430,7 +16405,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -16439,8 +16414,9 @@ jp-needs-light-background
     <span class="s2">&quot;min_samples_leaf&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
     <span class="s2">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="s2">&quot;entropy&quot;</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">dtc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">dtc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">)</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dtc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">dtc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">dtc_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -16459,7 +16435,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
 
 
 
@@ -16471,7 +16447,7 @@ jp-needs-light-background
                                         &#39;max_depth&#39;: [2, 4, 6, 8, 10, 12],
                                         &#39;max_features&#39;: [2, 4, 6, 8, 10],
                                         &#39;min_samples_leaf&#39;: [1, 2, 4]},
-                   scoring=make_scorer(draw_f1_fun))</pre>
+                   random_state=1, scoring=make_scorer(draw_f1_fun))</pre>
 </div>
 
 </div>
@@ -16485,7 +16461,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -16506,16 +16482,13 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;min_samples_leaf&#39;: 2,
- &#39;max_features&#39;: 10,
- &#39;max_depth&#39;: 6,
- &#39;criterion&#39;: &#39;gini&#39;}</pre>
+<pre>{&#39;min_samples_leaf&#39;: 1, &#39;max_features&#39;: 8, &#39;max_depth&#39;: 8, &#39;criterion&#39;: &#39;gini&#39;}</pre>
 </div>
 
 </div>
@@ -16529,7 +16502,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16555,7 +16528,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>dtc: mean = 0.9994, std = 0.0018
+<pre>dtc: mean = 0.9984, std = 0.0031
 </pre>
 </div>
 </div>
@@ -16569,7 +16542,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16595,7 +16568,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>dtc: mean = -2.0631, std = 0.0788
+<pre>dtc: mean = -1.8196, std = 0.0897
 </pre>
 </div>
 </div>
@@ -16620,7 +16593,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -16629,8 +16602,9 @@ jp-needs-light-background
     <span class="s2">&quot;min_samples_leaf&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
     <span class="s2">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="s2">&quot;entropy&quot;</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">dtc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">dtc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">)</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dtc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">dtc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">dtc_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -16649,7 +16623,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
 
 
 
@@ -16661,7 +16635,7 @@ jp-needs-light-background
                                         &#39;max_depth&#39;: [2, 4, 6, 8, 10, 12],
                                         &#39;max_features&#39;: [2, 4, 6, 8, 10],
                                         &#39;min_samples_leaf&#39;: [1, 2, 4]},
-                   scoring=make_scorer(win_neg_rmse_fun))</pre>
+                   random_state=1, scoring=make_scorer(win_neg_rmse_fun))</pre>
 </div>
 
 </div>
@@ -16675,7 +16649,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -16696,14 +16670,14 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;min_samples_leaf&#39;: 4,
- &#39;max_features&#39;: 10,
+<pre>{&#39;min_samples_leaf&#39;: 1,
+ &#39;max_features&#39;: 8,
  &#39;max_depth&#39;: 12,
  &#39;criterion&#39;: &#39;entropy&#39;}</pre>
 </div>
@@ -16719,7 +16693,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16745,7 +16719,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>dtc: mean = -1.5994, std = 0.089
+<pre>dtc: mean = -1.5621, std = 0.0817
 </pre>
 </div>
 </div>
@@ -16759,7 +16733,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">dtc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16785,7 +16759,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>dtc: mean = 0.9984, std = 0.003
+<pre>dtc: mean = 0.9964, std = 0.0053
 </pre>
 </div>
 </div>
@@ -16812,7 +16786,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Optymalizując parametry dla remisów otrzymaliśmy nieznacznie lepszą predykcyjność przy ich klasyfikacji. Odbiło się to jednak na wynikach predykcyjności liczby opytmalnych ruchów do mata przy wygranej. Opytymalizując dla wygranej nie znaleźliśmy parametrów, które miałyby lepsze wyniki niż domyślne. Ponownie najbardziej opłaca się użyć domyślnych parametrów.</p>
+<p>Ponownie nie znaleźliśmy parametrów, które miałyby lepsze wyniki niż domyślne. Zarówno do klasyfikacji remisów jak i estymacji opytmalnej liczby ruchów do mata najbardziej opłaca się użyć domyślnych parametrów.</p>
 
 </div>
 </div>
@@ -16844,7 +16818,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -16856,7 +16830,8 @@ jp-needs-light-background
     <span class="s1">&#39;bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="n">rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">rfc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">rfc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">)</span>
+<span class="n">rfc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">rfc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">draw_f1</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">rfc_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -16875,14 +16850,14 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[84]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>RandomizedSearchCV(cv=5, estimator=RandomForestClassifier(), n_iter=50,
-                   n_jobs=-1,
+<pre>RandomizedSearchCV(cv=5, estimator=RandomForestClassifier(random_state=1),
+                   n_iter=50, n_jobs=-1,
                    param_distributions={&#39;bootstrap&#39;: [True, False],
                                         &#39;max_depth&#39;: [6, 8, 10, 12],
                                         &#39;max_features&#39;: [&#39;auto&#39;, &#39;sqrt&#39;],
@@ -16890,7 +16865,7 @@ jp-needs-light-background
                                         &#39;min_samples_split&#39;: [1, 2, 5, 10],
                                         &#39;n_estimators&#39;: [400, 600, 800, 1000,
                                                          1200]},
-                   scoring=make_scorer(draw_f1_fun))</pre>
+                   random_state=1, scoring=make_scorer(draw_f1_fun))</pre>
 </div>
 
 </div>
@@ -16904,7 +16879,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -16925,13 +16900,13 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;n_estimators&#39;: 1000,
+<pre>{&#39;n_estimators&#39;: 600,
  &#39;min_samples_split&#39;: 5,
  &#39;min_samples_leaf&#39;: 1,
  &#39;max_features&#39;: &#39;auto&#39;,
@@ -16950,7 +16925,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -16976,7 +16951,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>rfc: mean = 0.9963, std = 0.0052
+<pre>rfc: mean = 0.9955, std = 0.0058
 </pre>
 </div>
 </div>
@@ -16990,7 +16965,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -17016,7 +16991,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>rfc: mean = -1.4067, std = 0.075
+<pre>rfc: mean = -1.4053, std = 0.075
 </pre>
 </div>
 </div>
@@ -17041,7 +17016,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -17053,7 +17028,8 @@ jp-needs-light-background
     <span class="s1">&#39;bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="n">rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">rfc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">rfc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">)</span>
+<span class="n">rfc_params_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">rfc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">win_neg_rmse</span><span class="p">,</span>
+                                       <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">rfc_params_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -17072,7 +17048,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
 
 
 
@@ -17087,7 +17063,7 @@ jp-needs-light-background
                                         &#39;min_samples_split&#39;: [1, 2, 5, 10],
                                         &#39;n_estimators&#39;: [400, 600, 800, 1000,
                                                          1200]},
-                   scoring=make_scorer(win_neg_rmse_fun))</pre>
+                   random_state=1, scoring=make_scorer(win_neg_rmse_fun))</pre>
 </div>
 
 </div>
@@ -17101,7 +17077,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_params_</span>
@@ -17122,15 +17098,15 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;n_estimators&#39;: 1000,
+<pre>{&#39;n_estimators&#39;: 1200,
  &#39;min_samples_split&#39;: 5,
- &#39;min_samples_leaf&#39;: 1,
+ &#39;min_samples_leaf&#39;: 2,
  &#39;max_features&#39;: &#39;auto&#39;,
  &#39;max_depth&#39;: 12,
  &#39;bootstrap&#39;: False}</pre>
@@ -17147,7 +17123,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -17173,7 +17149,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>rfc: mean = -1.4072, std = 0.0734
+<pre>rfc: mean = -1.4045, std = 0.0745
 </pre>
 </div>
 </div>
@@ -17187,7 +17163,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">rfc_params_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -17213,7 +17189,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>rfc: mean = 0.9957, std = 0.0055
+<pre>rfc: mean = 0.9916, std = 0.0064
 </pre>
 </div>
 </div>
@@ -17240,7 +17216,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wartości parametrów wydają się rozsądne. Wartość 'n_estimators' wybrało ze środka. min_samples_split' i 'min_samples_leaf', mimo że skrajnie małe wartości okazały się optymalne to niżej raczej nie należy schodzić. 'max_depth', mimo że jest maksymalny, to większy, raczej lepszy nie będzie (ponieważ użwamy tylko 10 kolumn).</p>
+<p>Wartości parametrów wydają się rozsądne. Wartość 'n_estimators' zostały wybrane ze środka. Dla 'min_samples_split' i 'min_samples_leaf' mimo że skrajnie małe wartości okazały się optymalne to raczej nie należy dobierać niższych. 'max_depth', mimo że jest maksymalny to większy raczej lepszy nie będzie (ponieważ użwamy tylko 10 kolumn).</p>
 
 </div>
 </div>
@@ -17252,9 +17228,9 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Optymalizując ze względu na remisy otrzymaliśmy najlepszą predykcyjność zarówno dla remisów jak i dla liczby optymalnych ruchów do mata. Będziemy zatem użwać modelu z parametrami:</p>
+<p>W obu przypadkach otrzymaliśmy lepsze rezultaty dla predykcji liczby ruchów do mata i minimalnie gorsze dla klasyfikacji remisów. Wydaje się, że model, który optymalizował ze względu na remisy jest skuteczniejszy. Różnica między RMSE jest minimalna, a znacząco lepiej klasyfikuje remisy. Będziemy zatem użwać modelu z parametrami:</p>
 <ul>
-<li>'n_estimators': 1000,</li>
+<li>'n_estimators': 600,</li>
 <li>'min_samples_split': 5,</li>
 <li>'min_samples_leaf': 1,</li>
 <li>'max_features': 'auto',</li>
@@ -17293,22 +17269,22 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span>
-    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
-    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-            <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="p">(</span><span class="s1">&#39;dtc&#39;</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;rfc&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span>
             <span class="n">min_samples_split</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
             <span class="n">min_samples_leaf</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
             <span class="n">max_features</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span>
             <span class="n">max_depth</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
             <span class="n">bootstrap</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
     <span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span> <span class="o">=</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)),</span>
 <span class="p">])</span>
-<span class="n">tuned_stacking</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">tuned_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">tuned_stacking</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span> <span class="o">=</span> <span class="n">tuned_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17321,7 +17297,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_draw</span><span class="p">(</span><span class="n">tuned_stacking</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -17361,7 +17337,7 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_evaluate_win</span><span class="p">(</span><span class="n">tuned_stacking</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -17387,7 +17363,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Tuned stacking (win): mean = -1.257, std = 0.0664
+<pre>Tuned stacking (win): mean = -1.2566, std = 0.0663
 </pre>
 </div>
 </div>
@@ -17403,7 +17379,508 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Model otrzymuje praktycznie identyczne wyniki z modelem 'selected_stacking'. Mamy delikatnie lepszą predykcyjność dla liczenia liczby ruchów przy partiach wygranych, a minimalną gorszą dla partii remisowych. Ze względu na to, że patrii wygranych mamy około 9 razy więcej niż remisowych wybierzemy model 'tuned_stacking'. Dodatkowym jego atutem jest to, że opiera się na jedynie trzech modelach bazowych, więc będzie delikatnie szybszy.</p>
+<p>Model otrzymuje praktycznie identyczne wyniki z modelem 'selected_stacking'. Mamy delikatnie lepszą predykcyjność dla liczenia liczby ruchów przy partiach wygranych, a minimalną gorszą dla partii remisowych. Ze względu na to, że patrii wygranych mamy około 9 razy więcej niż remisowych, prawdopodobnie wybierzemy model 'tuned_stacking'. Dodatkowym jego atutem jest to, że opiera się na jedynie trzech modelach bazowych, więc będzie delikatnie szybszy.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Testowanie-modeli">Testowanie modeli<a class="anchor-link" href="#Testowanie-modeli">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Pozostało przetestować modele na danych testowych.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dtc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="n">min_samples_split</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="n">min_samples_leaf</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">max_features</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+            <span class="n">max_depth</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+            <span class="n">bootstrap</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">rfc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">booster</span><span class="o">=</span><span class="s1">&#39;gbtree&#39;</span><span class="p">,</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">xgb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">tuned_stacking</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">tuned_models</span><span class="p">,</span> <span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">tuned_stacking</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>StackingClassifier(cv=5,
+                   estimators=[(&#39;dtc&#39;, DecisionTreeClassifier(random_state=1)),
+                               (&#39;rfc&#39;,
+                                RandomForestClassifier(bootstrap=False,
+                                                       max_depth=12,
+                                                       min_samples_split=5,
+                                                       n_estimators=600,
+                                                       random_state=1)),
+                               (&#39;xgb&#39;,
+                                XGBClassifier(base_score=None, booster=&#39;gbtree&#39;,
+                                              colsample_bylevel=None,
+                                              colsample_bynode=None,
+                                              colsample_bytree=None,
+                                              enable_categorical=False,
+                                              gamma=No...
+                                              learning_rate=None,
+                                              max_delta_step=None,
+                                              max_depth=None,
+                                              min_child_weight=None,
+                                              missing=nan,
+                                              monotone_constraints=None,
+                                              n_estimators=100, n_jobs=None,
+                                              num_parallel_tree=None,
+                                              predictor=None, random_state=1,
+                                              reg_alpha=None, reg_lambda=None,
+                                              scale_pos_weight=None,
+                                              subsample=None, tree_method=None,
+                                              validate_parameters=None,
+                                              verbosity=0))],
+                   final_estimator=LogisticRegression())</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Decision-Tree-Classifier">Decision Tree Classifier<a class="anchor-link" href="#Decision-Tree-Classifier">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_f1_fun</span><span class="p">(</span><span class="n">dtc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[98]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.9977023232065356</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">win_neg_rmse_fun</span><span class="p">(</span><span class="n">dtc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>-1.4937260357963371</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Random-Forest-Classifier">Random Forest Classifier<a class="anchor-link" href="#Random-Forest-Classifier">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_f1_fun</span><span class="p">(</span><span class="n">rfc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[100]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.9943934760448522</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">win_neg_rmse_fun</span><span class="p">(</span><span class="n">rfc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[101]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>-1.3683811185276018</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="XGBoost">XGBoost<a class="anchor-link" href="#XGBoost">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_f1_fun</span><span class="p">(</span><span class="n">xgb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[102]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.9979518689196109</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">win_neg_rmse_fun</span><span class="p">(</span><span class="n">xgb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[103]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>-1.2661578699403202</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Stacking-Tuned">Stacking Tuned<a class="anchor-link" href="#Stacking-Tuned">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_f1_fun</span><span class="p">(</span><span class="n">tuned_stacking</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[104]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.9982120051085569</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[105]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">win_neg_rmse_fun</span><span class="p">(</span><span class="n">tuned_stacking</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[105]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>-1.203922201972122</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Podsumowanie">Podsumowanie<a class="anchor-link" href="#Podsumowanie">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Zdecydowanie najlepiej na danych testowych poradził sobie model oparty na stacking, w którym modelami bazowymi są: DecisionTreeClassifier z domyślnymi argumentami, Random Forest Classifier z wybranymi parametrami i XGBoost z domyślnymi parametrami. Meta-modelem w tym przypadku jest regresja liniowa.</p>
 
 </div>
 </div>
